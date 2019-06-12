@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 
-    namespace Exercise1DevelopmentinCsharp
+namespace Exercise1DevelopmentinCsharp
 {
         class MainClass
     {
@@ -120,6 +122,31 @@
             return j;
         }
 
+
+        public void FirstFiveValues(List<int> l)
+        {
+            int j = 0;
+
+            for (int i = 0; i < 5; i++)
+            {
+                _ = l[i];
+
+                j++;
+
+                Console.WriteLine(j);
+                //Console.WriteLine(string.Join(", ", j));
+            }
+        }
+
+
+
+
+
+
+
+
+
+
         public static void Main(string[] args)
         {
             MainClass compare = new MainClass();
@@ -135,6 +162,24 @@
 
             MainClass count = new MainClass();
             Console.WriteLine(count.ReturnLengthofString("holatepicolacola"));
+
+            MainClass values = new MainClass();
+            List<int> intList = new List<int>
+            {
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8
+            };
+            values.FirstFiveValues(intList);
+
+
+
+
         }
     }
 }
