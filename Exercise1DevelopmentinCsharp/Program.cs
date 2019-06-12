@@ -85,7 +85,7 @@
                     }
                 }
             }
-            Console.WriteLine(string.Join(", ", x));
+            Console.WriteLine("Ascending order will be: " + string.Join(", ", x));
 
             for (int i = 0; i < x.Length; i++)
             {
@@ -102,11 +102,23 @@
                     }
                 }
             }
-            Console.WriteLine(string.Join(", ", x));
+            Console.WriteLine("Descending order will be: " + string.Join(", ", x));
 
         }
 
+        public int ReturnLengthofString(string b)
+        {
 
+            int j = 0;
+
+            for (int i = 0; i < b.Length; i++)
+            {
+                _ = b[i];
+                j++;
+            }
+            Console.Write("The length of the string is: ");
+            return j;
+        }
 
         public static void Main(string[] args)
         {
@@ -121,8 +133,8 @@
             string[] o = new string [4] { "Hello", "Airplane", "Car", "Zebra" };
             sortAscDesc.SortStrings(o);
 
-
-
+            MainClass count = new MainClass();
+            Console.WriteLine(count.ReturnLengthofString("holatepicolacola"));
         }
     }
 }
